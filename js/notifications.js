@@ -85,11 +85,11 @@ function createNotificationsFromData(ListaDados)
         <div class="notification ${dados.notificationStatus}">
         <header>
           <picture>
-            <img width="32px" height="32px" src="assets/images/${dados.ImageURL}" />
+            <img src="assets/images/${dados.ImageURL}" />
           </picture>
           <div class="action">
-            <span class="name">${dados.account}</span>${dados.action} <span class="action">${dados.actionTarget}</span>
-            <img src="${dados.actionTarget}">
+            <span class="name">${dados.account} </span>${dados.action} <span class="action">${dados.actionTarget}</span>
+            
             <div class="time">
               ${dados.time}
             </div>
