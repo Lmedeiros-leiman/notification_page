@@ -24,7 +24,9 @@
 }
 
 body {
-    background-color: var(--Very-light-grayish-blue);
+
+
+    background-color: var(--Light-grayish-blue-2);
 
     display: flex;
     justify-content: center;
@@ -34,6 +36,7 @@ body {
 .body,
 #body {
     min-width: 375px;
+    width: min-content;
     max-width: 1440px;
 
     background-color: white;
@@ -54,6 +57,16 @@ button {
     color: var(--Very-dark-blue);
 }
 
+picture{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+
+    height: 48px;
+    width: 48px;
+    
+}
+
 span.name {
     font-weight: 800;
 }
@@ -66,15 +79,16 @@ header.notifications {
     display: flex;
 
     justify-content: space-between;
+    padding-inline: 1rem;
 }
 
 header.notifications div {
     display: flex;
     align-items: center;
 
-    gap: 3rem;
+    gap: 1.5rem;
 
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 header.notifications .quantity {
@@ -88,14 +102,18 @@ header.notifications .quantity {
 #notifications {
     width: 100%;
 
-    background-color: red;
 }
 
 .unread {
     background-color: var(--Light-grayish-blue-2);
 }
 
-.notification {}
+.notification 
+{
+    padding: 0.25rem;
+    margin: 1rem;
+
+}
 
 .notification header {
     display: flex;

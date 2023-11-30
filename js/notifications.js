@@ -68,9 +68,9 @@ let ListaDados = [
 function mountActionImage(imagem)
 {
   return ` 
-  <picture>
-    <img src="assets/images/${imagem}">
-  </picture>
+  
+    <img width="48px" src="assets/images/${imagem}">
+  
   `
 }
 
@@ -85,7 +85,7 @@ function createNotificationsFromData(ListaDados)
         <div class="notification ${dados.notificationStatus}">
         <header>
           <picture>
-            <img src="assets/images/${dados.ImageURL}" />
+            <img width="48px"  src="assets/images/${dados.ImageURL}" />
           </picture>
           <div class="action">
             <span class="name">${dados.account} </span>${dados.action} <span class="action">${dados.actionTarget}</span>
@@ -94,9 +94,9 @@ function createNotificationsFromData(ListaDados)
               ${dados.time}
             </div>
           </div>
-          <div>
-          ${actionImage}
-          </div>
+          <picture>
+            ${actionImage}
+          </picture>
         </header>
         <div class="comment">
             ${dados.message}
