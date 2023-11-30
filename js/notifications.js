@@ -23,6 +23,7 @@ let ListaDados = [
     time: "1 day ago",
     action: "has joined your group",
     actionTarget: "Chess Club",
+    club: true,
     message: "",
     notificationStatus: "unread",
   },
@@ -60,6 +61,7 @@ let ListaDados = [
     time: "2 weeks ago",
     action: "left the group",
     actionTarget: "Chess Club",
+    club: true,
     message: "",
     notificationStatus: "read",
   }
@@ -77,30 +79,36 @@ function mountActionImage(imagem)
 function createNotificationsFromData(ListaDados)
 {
   let result = "";
+  
 
   ListaDados.forEach(dados =>
   {
     let actionImage = dados.actionImage ? mountActionImage(dados.actionImage) : "";
+    let group = dados.club ? "group" : ""; 
+
+    let message = dados.message ? `<div class="comment"> ${dados.message} </div>` : ""
     result += `
         <div class="notification ${dados.notificationStatus}">
         <header>
-          <picture>
-            <img width="48px"  src="assets/images/${dados.ImageURL}" />
-          </picture>
-          <div class="action">
-            <span class="name">${dados.account} </span>${dados.action} <span class="action">${dados.actionTarget}</span>
-            
-            <div class="time">
-              ${dados.time}
+          <div style="display: flex;"> 
+            <picture>
+              <img width="48px"  src="assets/images/${dados.ImageURL}" />
+            </picture>
+            <div class="action">
+              <span class="name">${dados.account} </span>${dados.action} <span class="action ${group}">${dados.actionTarget}</span>
+              
+              <div class="time">
+                ${dados.time}
+              </div>
             </div>
           </div>
-          <picture>
+          <picture">
             ${actionImage}
           </picture>
         </header>
-        <div class="comment">
-            ${dados.message}
-        </div>
+        
+        ${message}
+        
       </div>
         `
   })

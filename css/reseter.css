@@ -36,16 +36,17 @@ body {
 .body,
 #body {
     min-width: 375px;
-    width: min-content;
+    width: 50vw;
     max-width: 1440px;
 
     background-color: white;
+    border-radius: 10px;
 
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 500;
     font-size: 16px;
 
-    word-wrap: break-word;
+    word-wrap:normal;
 
 
 
@@ -64,61 +65,5 @@ picture{
 
     height: 48px;
     width: 48px;
-    
-}
 
-span.name {
-    font-weight: 800;
-}
-
-span.action {}
-
-.time {}
-
-header.notifications {
-    display: flex;
-
-    justify-content: space-between;
-    padding-inline: 1rem;
-}
-
-header.notifications div {
-    display: flex;
-    align-items: center;
-
-    gap: 1.5rem;
-
-    font-size: 1.25rem;
-}
-
-header.notifications .quantity {
-    background-color: var(--blue);
-    color: white;
-    padding-inline: 0.5rem;
-    border-radius: 5px;
-
-}
-
-#notifications {
-    width: 100%;
-
-}
-
-.unread {
-    background-color: var(--Light-grayish-blue-2);
-}
-
-.notification 
-{
-    padding: 0.25rem;
-    margin: 1rem;
-
-}
-
-.notification header {
-    display: flex;
-}
-
-.notification header img {
-    clear: right;
 }
